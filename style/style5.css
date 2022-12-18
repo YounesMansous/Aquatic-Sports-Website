@@ -1,0 +1,70 @@
+/* Cette page de style est reservé a la page "Plus d'informations" */
+
+.paralex{
+    background: url("../images/anastasia-taioglou-CTivHyiTbFw-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    display: flex;
+  }
+
+main{
+    margin: auto;
+}
+
+figure{ /* Ajouts d'icons au titres h2 */
+    display: grid;
+    grid-template-columns: 10em 40em;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+figure img{
+      height:8vw;
+      width: 8vw;
+      margin: auto;
+  }
+
+figcaption{
+      font-size: 150%;
+  }
+
+main ul li{
+    margin-bottom: 1em;
+}
+main p + ul{
+      margin-top: 3em;
+      margin-bottom: 5em;
+  }
+
+main ol li{
+    margin-top: 1em;
+}
+
+main a{
+    text-decoration: none;
+    color: rgb(80, 79, 79);
+}
+
+@media all and (max-width:650px){
+
+    p{
+      font-size:90%;
+      text-align: left;
+    }
+
+    main h2{
+        font-size: 120%;
+    }
+
+    main figure{
+        display: grid;
+        grid-template-columns: 5em 20em;
+    }
+
+    main a{
+        font-size: 70%;
+    }
+  
+  }

@@ -1,0 +1,62 @@
+/* Cette page de style est reservé a la page "En eau vive" */
+
+.paralex{
+    background: url("../images/images8.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    display: flex;
+}
+
+
+h2,h3{
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 0.6fr 0.5fr;
+    margin: auto;
+}
+
+.section{
+    display:grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    column-gap: 2em;
+
+}
+
+.section h2{
+    grid-column: span 2;
+}
+
+main img{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: 35vw;
+}
+
+p{
+    text-align: center;
+}
+
+@media all and (max-width:650px){
+
+    p{
+      font-size:90%;
+      text-align: left;
+    }
+
+    .section{
+        display: block;
+    }
+
+    main img{
+        width: 70vw;
+        height: 50vw;
+    }
+
+  }

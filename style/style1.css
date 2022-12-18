@@ -1,0 +1,81 @@
+/* Cette page de style est reservé a la page d'accueil */
+
+.paralex{ /* sur chaque page je change l'image background de la classe "paralexe" */
+  background: url("../images/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  border-bottom: 1px solid rgb(114, 114, 114);
+  display: flex;
+}
+
+
+body{
+  margin: auto;
+}
+
+main{ /* disposition des elements du main en grid */
+  padding-top: 5em;
+  font-weight: 700;
+  font-family: sans-serif;
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr;
+  gap : 4em;
+  padding-bottom: 5em;
+  color: rgba(0, 0, 0, 0.397);
+
+}
+
+article img{
+	width: 30vw;
+	height: 28vw;
+  box-shadow: 0em .2em 1em black;
+  transition: 1s;
+  position: relative;
+  border-radius: 100%;
+}
+
+article img:hover{/* Quand on hover les images de la page elle s'agrandissent progressivement */
+  transform: scale(1.1);
+  box-shadow: 0em .2em 1em black;
+}
+
+#article1, #article2, #article3{ 
+  border-bottom: 0.1em solid black;
+  padding-bottom: 4em;
+}
+
+main article figure{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap : 0em 4em;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+@media all and (max-width:650px){/* pour ajouter les media query a cette page j'ai simplement anuller touts les disposition en grid */
+
+  p,h2,h3{
+    font-size:90%;
+    text-align: left;
+  }
+
+  main img{
+    margin-top: 1em;
+    border-radius: 10%;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  main article figure{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #article2 img, #article3 + article img{
+    order: 2;
+  }
+}

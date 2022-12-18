@@ -1,0 +1,185 @@
+/* Ceci est une page de style commune pour toutes les pages du site, ainsi elle modifie le header et le footer de toutes les pages */
+
+header{
+    background-color: rgb(46, 46, 46);
+  }
+  
+  header ul{
+    display: grid;
+    grid-template-columns: 5.5em 7em 7em 7em 10em;
+    list-style: none;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .menucss, .activation{ /* La facon dont le header sera representé si la largeur de la page est sous 650pw */
+    display: none;
+  }
+
+
+  
+  header ul li a{ /* les elements qui nous emmenent vers les autres pages presents dans le menu du site */
+    display: inline-block;
+    padding:0.7em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+  }
+  
+  header ul li a:after{ /* Pour créer une ligne au dessous des elements du header afin de faire un style quand on hover sur ceux la */
+    content: "";
+    position: absolute;
+    background-color: #13a8ff;
+    height: 3px;
+    width: 0%;
+    left: 49%;
+    bottom: 0px;
+    transition: width 200ms;
+  }
+  
+  
+  header ul li a:before{/* Pour créer une ligne au dessous des elements du header afin de faire un style quand on hover sur ceux la */
+    content: "";
+    position: absolute;
+    background-color: #13a8ff;
+    height: 3px;
+    width: 0%;
+    right: 50%;
+    bottom: 0px;
+    transition: width 200ms;
+  }
+  
+  header ul li a:hover{
+    color:#13a8ff;
+  }
+  header ul li a:hover:after{ /* Quand on hover sur les elements <a> du header une ligne bleu apparait au dessous d'elles */
+    width: 51%;
+    transition: width 200ms;
+  }
+  
+  header ul li a:hover:before{/* Quand on hover sur les elements <a> du header une ligne bleu apparait au dessous d'elles */
+    width: 50%;
+    transition: width 200ms;
+  }
+  
+  .paralex h1{/* Mettre le text "Profite de la mer" sur l'image au dessus du header */
+    margin: auto;
+    color:rgb(46, 46, 46);
+    font-size: 300%;
+    border-top:3px solid rgb(46, 46, 46);
+    border-bottom:3px solid rgb(46, 46, 46);
+    padding: 0.2em 1em;
+    letter-spacing: .08em;
+    font-family: 'Script';
+  }
+
+body{
+    margin:auto;
+}
+main{
+    color: rgba(0, 0, 0, 0.397);
+    width: 70%;
+    margin: auto;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+  h2,h3{
+    color: rgb(46, 46, 46);
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 200%;
+  }
+
+  p{
+    text-indent: 2em;
+}
+
+  footer{ /* j'ai organiser mon footer en grid car il est composé de deux listes */
+    background-color: rgb(46, 46, 46);
+    padding: 5em 2em;
+    text-align: center;
+    color: white;
+    padding-right: 2em;
+    font-size: smaller;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  footer ul{
+    list-style: none;
+  }
+  
+  .infos{
+    border-right: 1px solid white;
+  }
+  
+  footer ul li{
+    padding: 1.5%;
+  }
+  
+  footer ul li img{
+    width: 25vw;
+    height: 30vh;
+  }
+
+  @font-face {
+    font-family: "Script";
+    src: url("../fonts/BrightSummer.otf");
+  }
+
+  @media all and (max-width:650px){
+    .activation {/* Si la largeur de la page est au dessous de 650px alors le menu header sera en caché (height: 0px) et ne sera affiché que si on coche la case "activation" */
+      display: block;
+      font-size: 300%;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+      background-color: rgb(46, 46, 46);
+      transition: all 100ms;
+      width: auto;
+      height: 1.2em;
+      text-align: center;
+  }
+header{
+  height: 0%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transition: height 200ms;
+}
+  header ul{ /* reorganiser le header de maniere verticale de facon a ce qu'il s'affiche bien sur des ecrans téléphones */
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    justify-content: center;
+    margin: auto;
+    padding-left: 0;
+    justify-items: center;
+  }
+
+
+  .menucss:checked ~ header {
+      height: 13em;
+      transition: height 200ms;
+      background-color: rgb(46, 46, 46);
+  }
+
+  .paralex h1{
+    font-size: 110%;
+    transition: 400ms;
+  }
+
+  footer{
+    font-size: 70%;
+  }
+
+  footer ul{
+    padding-right: 1.5em;
+  }
+
+  footer ul li img{
+    width: 40vw;
+    height: 23vw;
+  }
+  }

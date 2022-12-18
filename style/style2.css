@@ -1,0 +1,98 @@
+/* Cette page de style est reservé a la page "En eau libre" */
+
+.paralex{
+    background: url("../images/Images6.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    display: flex;
+  }
+
+#defiler img{ /* j'ai voulue créer un diaporama d'images, et pour ca j'ai d'abord mis les 3 images que j'ai dans une boite avec l'identifiant "defiler" que j'ai ensuite display en block */
+    width: 100%;
+    height: 110%;
+    position: relative;
+    display:block;
+    padding-top: 4em;
+}
+
+main{
+    padding: 2em;
+    padding-bottom: 7em;
+    text-align: center;
+}
+#defiler{/* j'ai ensuite utilisé la régle "overflow:hidden" afin de n'afficher qu'une seule image a la fois dans la boite */
+    display: flex;
+    text-align: center;
+    background-color: transparent;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 80%;
+    height: 35vw;
+    margin:auto;
+}
+
+h2,h3{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+h3{
+    font-size: 50%;
+}
+
+.garry ul{/* maintenant il nous reste plus qu'a ajouter des boutons pour choisir quelle image on veux afficher dans la boite ce qui donne un effet de diaporama */
+    display: grid;
+    list-style: none;
+    justify-content: center;
+    grid-template-columns: 5em 5em 5em;
+    padding: 5vh;
+    margin: auto;
+    margin-bottom: 4em;
+    padding-bottom: 5em;
+    border-bottom: 0.2em solid rgb(46, 46, 46);
+    border-radius: 5%;
+    width: 50%;
+}
+
+.garry ul a{
+    border-radius: 100%;
+    border: 0.2em solid rgb(46, 46, 46);
+    padding:10% 20%;
+    background-color: rgb(46, 46, 46);
+    transition: 200ms;
+}
+
+.garry ul a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.garry ul a:target{
+    background-color: rgb(255, 255, 255);
+}
+
+figure:hover::before{
+    opacity: 0.5;
+    transition: 300ms;
+
+}
+
+@media all and (max-width:650px){
+
+    p{
+      font-size:90%;
+      text-align: left;
+    }
+
+    #defiler{
+        width: 100%;
+        height: 50vw;
+    }
+
+    .garry ul a{
+        padding: 0.25em 0.75em;
+    }
+
+  }
